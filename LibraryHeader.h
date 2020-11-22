@@ -1,0 +1,12 @@
+#ifndef PARTICLE_COLLISIONER_LIBRARYHEADER_H
+#define PARTICLE_COLLISIONER_LIBRARYHEADER_H
+
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include <vector>
+
+using namespace std;
+
+using Float = float;
+
+#endif
