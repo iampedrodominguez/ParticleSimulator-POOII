@@ -1,0 +1,6 @@
+1. Preguntarle al profe sobre que es count.
+2. Cual metodo recomendaria para dibujar las particulas para que queden bien
+
+3. Porque en la clase event en el libro, nos comentan que hay un heap o un método de organizacion
+sort.
+
