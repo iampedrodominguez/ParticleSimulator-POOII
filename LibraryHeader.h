@@ -7,6 +7,7 @@
 
 using namespace std;
 
-using Float = float;
+using Float = double;
+using Double = double;
 
 #endif
