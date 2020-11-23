@@ -10,9 +10,8 @@ class Collision_System {
     vector<Particle> particles;
 
 public:
-
     Collision_System();
-    Collision_System(sf::RenderWindow* wnd, initializer_list<Particle> list);
+    Collision_System(sf::RenderWindow* wnd, vector<Particle> &list);
 
     void draw();
     void move();

@@ -4,6 +4,10 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
+#include <cmath>
 
 using namespace std;
 
