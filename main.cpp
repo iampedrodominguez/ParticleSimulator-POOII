@@ -1,14 +1,17 @@
 #include "LibraryHeader.h"
 #include "Collision_System.h"
 
+#define width 800
+#define height 600
+
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Particle_Collision");
+    sf::RenderWindow window(sf::VideoMode(width, height), "Particle_Collision");
     Collision_System test(&window,
-                          {{100,10,5,1,1},
-                               {100,200,15,2,2},
-                               {200,300,10,-1,-1},
-                               {400,400,5,-2,-2}});
+                          {{10,10,0.1,0.4,20},
+                           {100,110,0.1,0.4,10},
+                           {600,210,0.1,0.4,30},
+                           {400,190,0.1,0.4,15}});
 
     while (window.isOpen())
     {

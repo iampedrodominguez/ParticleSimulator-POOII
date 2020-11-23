@@ -5,8 +5,9 @@
 
 struct Particle {
     Float rx, ry;
-    Float radius;
     Float vx, vy;
+    Float radius;
+    Float mass;
 };
 
 #endif
