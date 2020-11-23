@@ -1,17 +1,25 @@
 #include "LibraryHeader.h"
 #include "Collision_System.h"
 
-#define width 800
-#define height 600
+#define width 1000
+#define height 700
 
 int main()
 {
+
+    srand(time(nullptr));
+
+    Float rad = 5, x_ = 28, y_ = 100, row = width/x_, column = height/y_;
+
+    vector<Particle> temp;
+    for(int j = 0; j < column; j++) {
+        for (int i = 0; i < row; i++) {
+            temp.push_back({i * x_, j * y_, double((rand()%10%3 + 1)), double((rand()%10%3 + 1)), rad});
+        }
+    }
+
     sf::RenderWindow window(sf::VideoMode(width, height), "Particle_Collision");
-    Collision_System test(&window,
-                          {{10,10,0.1,0.4,20},
-                           {100,110,0.1,0.4,10},
-                           {600,210,0.1,0.4,30},
-                           {400,190,0.1,0.4,15}});
+    Collision_System test(&window,temp);
 
     while (window.isOpen())
     {
