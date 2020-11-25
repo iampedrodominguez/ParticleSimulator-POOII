@@ -8,6 +8,7 @@ struct Particle {
     Float vx, vy;
     Float radius;
     Float mass;
+    int last_collision;
 };
 
 #endif
