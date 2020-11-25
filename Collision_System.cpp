@@ -51,7 +51,9 @@ void Collision_System:: move(){
         for(int j = 0; j < size(particles); j++) {
             if (i != j) {
                 if (ceil((calculate_distance(particles[i], particles[j]))) <= 2 * particles[i].radius) {
-                    if (particles[i].last_collision != j) {
+
+                    if (particles[i].last_collision != j || particles[i].last_collision == -1) {
+
                         Double fx = impulse_fx(particles[i], particles[j]);
                         Double fy = impulse_fy(particles[i], particles[j]);
                         particles[i].vx += fx / particles[i].mass;
@@ -65,12 +67,15 @@ void Collision_System:: move(){
             }
         }
 
-        if (particles[i].rx + particles[i].vx <= 0 || particles[i].rx + particles[i].vx >= 1000 - 2*particles[i].radius)
+        if (particles[i].rx + particles[i].vx <= 0 || particles[i].rx + particles[i].vx >= 1000 - 2*particles[i].radius){
             particles[i].vx = -particles[i].vx;
+            particles[i].last_collision = -1;
+        }
 
-        if (particles[i].ry + particles[i].vy <= 0 || particles[i].ry + particles[i].vy >= 700 - 2*particles[i].radius)
+        if (particles[i].ry + particles[i].vy <= 0 || particles[i].ry + particles[i].vy >= 700 - 2*particles[i].radius){
             particles[i].vy = -particles[i].vy;
-
+            particles[i].last_collision = -1;
+        }
         particles[i].rx += particles[i].vx;
         particles[i].ry += particles[i].vy;
     }
