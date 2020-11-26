@@ -4,7 +4,7 @@ project(Particle_Collisioner)
 # Archivos del Projecto
 set(PROJECT_SOURCE
         main.cpp
-        Particle.cpp Particle.h Collision_System.cpp Collision_System.h LibraryHeader.h)
+        Particle.cpp Particle.h Collision_System.cpp Collision_System.h LibraryHeader.h Particles.cpp Particles.h)
 
 # C++ Standard se sugiere 11 o 14
 set(CMAKE_CXX_STANDARD 14)

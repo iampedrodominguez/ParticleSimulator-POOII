@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/franc/CLionProjects/Particle_Collisioner/Collision_System.cpp" "C:/Users/franc/CLionProjects/Particle_Collisioner/cmake-build-debug/CMakeFiles/Particle_Collisioner.dir/Collision_System.cpp.obj"
   "C:/Users/franc/CLionProjects/Particle_Collisioner/Particle.cpp" "C:/Users/franc/CLionProjects/Particle_Collisioner/cmake-build-debug/CMakeFiles/Particle_Collisioner.dir/Particle.cpp.obj"
+  "C:/Users/franc/CLionProjects/Particle_Collisioner/Particles.cpp" "C:/Users/franc/CLionProjects/Particle_Collisioner/cmake-build-debug/CMakeFiles/Particle_Collisioner.dir/Particles.cpp.obj"
   "C:/Users/franc/CLionProjects/Particle_Collisioner/main.cpp" "C:/Users/franc/CLionProjects/Particle_Collisioner/cmake-build-debug/CMakeFiles/Particle_Collisioner.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

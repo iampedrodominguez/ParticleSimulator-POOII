@@ -181,6 +181,33 @@ Particle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Particle_Collisioner.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Particle_Collisioner.dir\Particle.cpp.s
 .PHONY : Particle.cpp.s
 
+Particles.obj: Particles.cpp.obj
+
+.PHONY : Particles.obj
+
+# target to build an object file
+Particles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Particle_Collisioner.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Particle_Collisioner.dir\Particles.cpp.obj
+.PHONY : Particles.cpp.obj
+
+Particles.i: Particles.cpp.i
+
+.PHONY : Particles.i
+
+# target to preprocess a source file
+Particles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Particle_Collisioner.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Particle_Collisioner.dir\Particles.cpp.i
+.PHONY : Particles.cpp.i
+
+Particles.s: Particles.cpp.s
+
+.PHONY : Particles.s
+
+# target to generate assembly for a file
+Particles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Particle_Collisioner.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Particle_Collisioner.dir\Particles.cpp.s
+.PHONY : Particles.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -223,6 +250,9 @@ help:
 	@echo ... Particle.obj
 	@echo ... Particle.i
 	@echo ... Particle.s
+	@echo ... Particles.obj
+	@echo ... Particles.i
+	@echo ... Particles.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

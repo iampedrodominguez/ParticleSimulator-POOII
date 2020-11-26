@@ -101,6 +101,12 @@
 		<Unit filename="C:/Users/franc/CLionProjects/Particle_Collisioner/Particle.h">
 			<Option target="Particle_Collisioner"/>
 		</Unit>
+		<Unit filename="C:/Users/franc/CLionProjects/Particle_Collisioner/Particles.cpp">
+			<Option target="Particle_Collisioner"/>
+		</Unit>
+		<Unit filename="C:/Users/franc/CLionProjects/Particle_Collisioner/Particles.h">
+			<Option target="Particle_Collisioner"/>
+		</Unit>
 		<Unit filename="C:/Users/franc/CLionProjects/Particle_Collisioner/main.cpp">
 			<Option target="Particle_Collisioner"/>
 		</Unit>

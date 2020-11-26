@@ -1,20 +1,13 @@
 #ifndef PARTICLE_COLLISIONER_COLLISION_SYSTEM_H
 #define PARTICLE_COLLISIONER_COLLISION_SYSTEM_H
 
-#include "Particle.h"
+#include "Particles.h"
 
 class Collision_System {
-
+private:
     sf::RenderWindow* window{};
-    Double t = 0;
-    vector<Particle> particles;
-
 public:
-    Collision_System();
-    Collision_System(sf::RenderWindow* wnd, vector<Particle> &list);
-
-    void draw();
-    void move();
+    Collision_System(sf::RenderWindow* wnd, int num);
 };
 
 #endif
