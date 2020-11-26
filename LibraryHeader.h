@@ -4,10 +4,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <cstdio>
 #include <cmath>
+#include <random>
 
 using namespace std;
 
