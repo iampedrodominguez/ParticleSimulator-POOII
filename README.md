@@ -13,10 +13,8 @@ Equipo:
 Profesor:  
 -Rivas Medina, Rubén Demetrio
 
-   
-      
-         
-         
+  
+  
 GUÍA DE USO:
 
 Al iniciar, el programa le pedirá el número de partículas que desea observar en el simulador (Máximo de 250). Después de confirmar el número, el programa mostrará la simulación de particulas en el vacío.
