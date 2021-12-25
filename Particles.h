@@ -4,16 +4,24 @@
 #include "Particle.h"
 
 class Particles{
-    int number_of_particles;
+    int nParticles;
     vector<Particle> particles;
 
 public:
-    Particles();
-    explicit Particles(int number);
+    //Constructor and particles' generator
+    Particles(int number);
+    void random_generator();
+    void one_particle();
+    void ten_particles();
 
+    //Particles' drawing on screen
     void draw(sf::RenderWindow* window);
+
+    //Particles' movement N²
     void move();
 
+    //Particles' movement NlogN
+    void move_optimal();
 };
 
 

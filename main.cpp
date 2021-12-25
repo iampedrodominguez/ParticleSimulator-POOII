@@ -1,8 +1,5 @@
-#include "LibraryHeader.h"
+//#include "LibraryHeader.h"
 #include "Collision_System.h"
-
-#define width 1000
-#define height 700
 
 int main()
 {
@@ -18,7 +15,7 @@ int main()
     }
 
     //RENDERIZADO DE PANTALLA
-    sf::RenderWindow window(sf::VideoMode(width, height), "Particle_Collision");
+    sf::RenderWindow window(sf::VideoMode(width, height), "Simulacion de particulas");
     Collision_System start(&window, number_particles);
 
     return 0;

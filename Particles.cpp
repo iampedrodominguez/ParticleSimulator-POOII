@@ -1,5 +1,60 @@
 #include "Particles.h"
 
+// Constructor and particles' generator
+
+Particles::Particles(int number): nParticles(number){
+
+    this->one_particle();
+    // this->ten_particles();
+    // this->random_generator();
+}
+
+void Particles::random_generator() {
+
+    random_device rd;
+    mt19937 generator(rd());
+    uniform_real_distribution<double> distribution(-3,3);
+
+    int column = 0, row = 25;
+    for(int i = 0; i < nParticles; i++) {
+        if (i% row == 0)
+            column += 20;
+        particles.emplace_back(i%row * 1000/row, column, distribution(generator),distribution(generator),5, 1);
+    }
+}
+
+void Particles::one_particle() {
+
+    particles.emplace_back(0,0,1,1,30,0.5);
+
+}
+
+void Particles::ten_particles() {
+
+    particles = {{0,0,1,1,30,0.5},
+                 {800,600,1,1,30,0.5},
+                 {100,0,1,1,30,0.5},
+                 {300,600,1,1,30,0.5},
+                 {0,400,1,1,30,0.5},
+                 {0,600,1,1,30,0.5},
+                 {200,100,1,1,30,0.5},
+                 {200,400,1,1,30,0.5},
+                 {500,500,1,1,30,0.5},
+                 {500,100,1,1,30,0.5}};
+}
+
+//DIBUJO DE CADA PARTICULA
+void Particles::draw(sf::RenderWindow* window) {
+    for (auto &p : particles){
+        sf::CircleShape shape(p.get_radius());
+        shape.setFillColor(sf::Color::Red);
+        shape.setPosition(p.get_x(), p.get_y());
+        window->draw(shape);
+    }
+}
+
+//Particles' movement
+
 Double calculate_distance(Particle &a, Particle &b){
     return sqrt(pow((a.get_x()-b.get_x()),2) + pow((a.get_y()-b.get_y()), 2));
 }
@@ -31,55 +86,12 @@ Double impulse_fy(Particle &a, Particle &b){
     return magnitude * dy / distance;
 }
 
-Particles::Particles() = default;
-
-Particles::Particles(int number): number_of_particles(number){
-
-    // 1 PARTICULA
-    /*for(int i = 0; i < number_of_particles; i++)
-        particles.emplace_back(0,0,1,1,30,0.5);*/
-
-    // 10 PARTICULAS
-    /* particles = {{0,0,1,1,30,0.5},
-                 {800,600,1,1,30,0.5},
-                 {100,0,1,1,30,0.5},
-                 {300,600,1,1,30,0.5},
-                 {0,400,1,1,30,0.5},
-                 {0,600,1,1,30,0.5},
-                 {200,100,1,1,30,0.5},
-                 {200,400,1,1,30,0.5},
-                 {500,500,1,1,30,0.5},
-                 {500,100,1,1,30,0.5}};*/
-
-    // GENERADORA DE PARTICULAS
-    random_device rd;
-    mt19937 generator(rd());
-    uniform_real_distribution<double> distribution(-3,3);
-
-    int column = 0, row = 25;
-    for(int i = 0; i < number_of_particles; i++) {
-        if (i% row == 0)
-            column += 20;
-        particles.emplace_back(i%row * 1000/row, column, distribution(generator),distribution(generator),5, 1);
-        }
-}
-
-
-//DIBUJO DE CADA PARTICULA
-void Particles::draw(sf::RenderWindow* window) {
-    for (auto &p : particles){
-        sf::CircleShape shape(p.get_radius());
-        shape.setFillColor(sf::Color::Red);
-        shape.setPosition(p.get_x(), p.get_y());
-        window->draw(shape);
-    }
-}
 
 void Particles::move(){
 
     // COMPARACION DE COLISION ENTRE PARTICULAS
-    for(int i = 0; i < size(particles); i ++) {
-        for (int j = 0; j < size(particles); j++) {
+    for(int i = 0; i < particles.size(); i ++) {
+        for (int j = 0; j < particles.size(); j++) {
             if (i != j) {
                 if (ceil((calculate_distance(particles[i], particles[j]))) <= 2 * particles[i].get_radius()) {
 
