@@ -78,8 +78,8 @@ void Particles::draw(sf::RenderWindow* window) {
 void Particles::move(){
 
     // COMPARACION DE COLISION ENTRE PARTICULAS
-    for(int i = 0; i < size(particles); i ++) {
-        for (int j = 0; j < size(particles); j++) {
+    for(int i = 0; i < particles.size(); i ++) {
+        for (int j = 0; j < particles.size(); j++) {
             if (i != j) {
                 if (ceil((calculate_distance(particles[i], particles[j]))) <= 2 * particles[i].get_radius()) {
 
